@@ -5,7 +5,7 @@ import path from "path";
 export default defineConfig(({ mode }) => {
   // ✅ CRITICAL: Set base path for GitHub Pages
   const basepath = mode === "production"
-    ? "/studybuddy-moodflow-main/"  // ← MUST MATCH YOUR REPO NAME EXACTLY
+    ? "/studdy_buddy/"  // ← MUST MATCH YOUR REPO NAME EXACTLY
     : "/";
 
   return {
@@ -19,6 +19,6 @@ export default defineConfig(({ mode }) => {
         "@": path.resolve(__dirname, "./src"),
       },
     },
-    base: basepath, // ✅ THIS IS THE FIX — DO NOT FORGET THIS!
+    base: basepath, // ✅ THIS IS THE KEY — DO NOT REMOVE!
   };
 });
